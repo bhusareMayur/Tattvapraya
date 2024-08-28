@@ -1027,3 +1027,81 @@ button:hover {
 .social-icons a:hover {
     color: #0077b5; /* LinkedIn blue */
 }
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Main Container Styles */
+.main-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Chart Section Styles */
+.chart-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.chart-section h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Canvas Element Size */
+#cropChart {
+    width: 100% !important; /* Adjust to fit container */
+    max-width: 600px;      /* Limit the maximum width */
+    height: 400px;         /* Set a fixed height for consistency */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Additional Styles for Navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}

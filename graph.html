@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KruConnect.com</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div  class="logo"  ><li><a href="index.html">KruConnect</a></li></div>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="profil.html">View Profile</a></li>
+                <li><a href="network.html">Network</a></li>
+                <li><a href="arima.html">ARIMA</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="msg.html">messeges</a></li>
+                <li><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <header>
+        <h1>Crop Distribution Dashboard</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="chart-section">
+            <h2>Crop Distribution</h2>
+            <canvas id="cropChart"></canvas>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 KruConnect. All rights reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="graph.js"></script>
+</body>
+</html>
