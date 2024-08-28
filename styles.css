@@ -980,3 +980,50 @@ button:hover {
     font-size: 18px;
     color: #333;
 }
+/* About Us Page Styling */
+.about-container {
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+}
+
+.about-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.team-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.team-list li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0077b5; /* LinkedIn blue */
+}
