@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KruConnect.com</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div  class="logo"  ><li><a href="index.html">KruConnect</a></li></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li> 
+                <li><a href="profile.html">Profile</a></li> 
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="msg.html">messeges</a></li>
+                <li><a href="arima.html">ARIMA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <!-- Sidebar content -->
+        </aside>
+
+        <div class="content">
+            <div class="network-management">
+                <h2>Network Management</h2>
+
+                <!-- Search for Users -->
+                <div class="search-container">
+                    <input type="text" placeholder="Search for users...">
+                    <button>Search</button>
+                </div>
+
+                <!-- Add New Connection -->
+                <div class="add-connection">
+                    <h3>Add New Connection</h3>
+                    <form id="add-connection-form">
+                        <div class="form-group">
+                            <label for="connection-name">User Name:</label>
+                            <input type="text" id="connection-name" name="connection-name" required>
+                        </div>
+                        <button type="submit">Add Connection</button>
+                    </form>
+                </div>
+
+                <!-- Existing Connections -->
+                <div class="connections-list">
+                    <h3>Existing Connections</h3>
+                    <ul>
+                        <li>
+                            <img src="https://via.placeholder.com/50" alt="User Picture">
+                            <div class="connection-info">
+                                <h4>Rushikesh Bobade</h4>
+                                <p>Farmer at Example Farm</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="https://via.placeholder.com/50" alt="User Picture">
+                            <div class="connection-info">
+                                <h4>Avadhut dalvi</h4>
+                                <p>Farmer at Sample Farm</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="https://via.placeholder.com/50" alt="User Picture">
+                            <div class="connection-info">
+                                <h4>Shreyas Giramkar</h4>
+                                <p>Farmer at Sample Farm</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="https://via.placeholder.com/50" alt="User Picture">
+                            <div class="connection-info">
+                                <h4>Vidya</h4>
+                                <p>Farmer at Sample Farm</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="https://via.placeholder.com/50" alt="User Picture">
+                            <div class="connection-info">
+                                <h4>Pranali</h4>
+                                <p>Farmer at Sample Farm</p>
+                            </div>
+                        </li>
+                        <!-- Add more connections as needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <aside class="right-sidebar">
+            <!-- Right Sidebar content -->
+        </aside>
+    </div>
+
+    <footer>
+        &copy; 2024 Farmers' Connect. All rights reserved.
+    </footer>
+</body>
+</html>

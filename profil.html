@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KruConnect.com</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div  class="logo"  ><li><a href="index.html">KruConnect</a></li></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="network.html">Network</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="msg.html">messeges</a></li>
+                <li><a href="arima.html">ARIMA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <h2>Crop Survey</h2>
+            <form id="surveyForm">
+                <label for="crop">Select Crop:</label>
+                <select id="crop" name="crop">
+                    <option value="wheat">Wheat</option>
+                    <option value="rice">Rice</option>
+                    <option value="corn">Corn</option>
+                    <option value="soybean">Soybean</option>
+                    <option value="cotton">Cotton</option>
+                    <option value="onion">onion</option>
+                    <option value="cotton">Cotton</option>
+                </select>
+        
+                <label for="area">Area Planted (in acres):</label>
+                <input type="number" id="area" name="area" placeholder="Enter area in acres">
+        
+                <button type="submit">Submit</button>
+            </form>
+            <p id="successMessage" style="display:none; color: green;">Survey submitted successfully!</p>
+        </aside>
+        
+        <script>
+            document.getElementById("surveyForm").addEventListener("submit", function(event){
+                event.preventDefault(); // Prevent the form from submitting in the traditional way
+                
+                // Perform any validation or processing here if needed
+                
+                // Hide the form
+                document.getElementById("surveyForm").style.display = "none";
+                
+                // Show the success message
+                document.getElementById("successMessage").style.display = "block";
+            });
+        </script>
+        
+
+        <div class="content">
+            <div class="profile-section">
+                <div class="profile-header">
+                    <div class="profile-picture">
+                        <img src="profile_photo.jpg" alt="Profile Picture">
+                    </div>
+                    <div class="profile-info">
+                        <h1>Mayur Bhusare</h1>
+                        <p class="bio">Farmer at Sample Farm | Enthusiast of organic farming and sustainable practices.</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <h3>120</h3>
+                                <p>Connections</p>
+                            </div>
+                            <div class="stat">
+                                <h3>0</h3>
+                                <p>Posts</p>
+                            </div>
+                            <div class="stat">
+                                <h3>5</h3>
+                                <p>Groups</p>
+                            </div>
+                        </div>
+                        <button>Edit Profile</button>
+                    </div>
+                </div>
+
+                <div class="user-posts">
+                    <h2>Recent Posts</h2>
+                    <div class="post">
+                        <div class="post-header">
+                            <img src="https://via.placeholder.com/50" alt="User Picture">
+                            <div class="post-info">
+                                <h3>Mayur Bhusare</h3>
+                                <p>Farmer at Sample Farm</p>
+                            </div>
+                        </div>
+                        <p>This is an example post about sustainable farming practices. Let’s share knowledge!</p>
+                        <div class="post-actions">
+                            <button class="like-button">Like</button>
+                            <button class="comment-button">Comment</button>
+                            <button class="share-button">Share</button>
+                        </div>
+                    </div>
+                    <!-- Repeat for more posts -->
+                </div>
+            </div>
+        </div>
+
+        <aside class="right-sidebar">
+            <!-- Right Sidebar content -->
+        </aside>
+    </div>
+
+    <footer>
+        &copy; 2024 KruConnect. All rights reserved.
+    </footer>
+</body>
+</html>
