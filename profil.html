@@ -8,15 +8,15 @@
 </head>
 <body>
     <header>
-        <div  class="logo"  ><li><a href="index.html">KruConnect</a></li></div>
+        <div class="logo"><a href="index.html">KruConnect</a></div>
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="network.html">Network</a></li> 
                 <li><a href="login.html">Login</a></li>
                 <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="msg.html">messeges</a></li> 
-                <li><a href="about.html">About us</a></li>
+                <li><a href="msg.html">Messages</a></li> 
+                <li><a href="about.html">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -32,8 +32,7 @@
                     <option value="corn">Corn</option>
                     <option value="soybean">Soybean</option>
                     <option value="cotton">Cotton</option>
-                    <option value="onion">onion</option>
-                    <option value="cotton">Cotton</option>
+                    <option value="onion">Onion</option>
                 </select>
         
                 <label for="area">Area Planted (in acres):</label>
@@ -44,19 +43,12 @@
             <p id="successMessage" style="display:none; color: green;">Survey submitted successfully!</p>
             <br/><br/>
             <li><a href="graph.html">Display Graph</a></li>
-
         </aside>
         
         <script>
             document.getElementById("surveyForm").addEventListener("submit", function(event){
-                event.preventDefault(); // Prevent the form from submitting in the traditional way
-                
-                // Perform any validation or processing here if needed
-                
-                // Hide the form
+                event.preventDefault();
                 document.getElementById("surveyForm").style.display = "none";
-                
-                // Show the success message
                 document.getElementById("successMessage").style.display = "block";
             });
         </script>
@@ -99,15 +91,18 @@
                                 <p>Farmer at Sample Farm</p>
                             </div>
                         </div>
-                        <p>This is an example post about sustainable farming practices. Let’s share knowledge!</p>
+                        <p class="post-content">This is an example post about sustainable farming practices. Let’s share knowledge!</p>
                         <div class="post-actions">
                             <button class="like-button">Like</button>
                             <button class="comment-button">Comment</button>
                             <button class="share-button">Share</button>
+                            <button class="edit-button" onclick="editPost(this)">Edit</button>
+                            <button class="delete-button" onclick="deletePost(this)">Delete</button>
                         </div>
                     </div>
                     <!-- Repeat for more posts -->
                 </div>
+                <button class="add-post-button" onclick="addPost()">Add Post</button>
             </div>
         </div>
 
@@ -119,5 +114,49 @@
     <footer>
         &copy; 2024 KruConnect. All rights reserved.
     </footer>
+
+    <script>
+        function editPost(button) {
+            const postContent = button.parentElement.parentElement.querySelector('.post-content');
+            const newContent = prompt("Edit your post:", postContent.textContent);
+            if (newContent !== null) {
+                postContent.textContent = newContent;
+            }
+        }
+
+        function deletePost(button) {
+            if (confirm("Are you sure you want to delete this post?")) {
+                const post = button.parentElement.parentElement;
+                post.parentNode.removeChild(post);
+            }
+        }
+
+        function addPost() {
+            const newPostContent = prompt("Enter your new post:");
+            if (newPostContent) {
+                const userPosts = document.querySelector('.user-posts');
+                const newPost = document.createElement('div');
+                newPost.classList.add('post');
+                newPost.innerHTML = `
+                    <div class="post-header">
+                        <img src="https://via.placeholder.com/50" alt="User Picture">
+                        <div class="post-info">
+                            <h3>Mayur Bhusare</h3>
+                            <p>Farmer at Sample Farm</p>
+                        </div>
+                    </div>
+                    <p class="post-content">${newPostContent}</p>
+                    <div class="post-actions">
+                        <button class="like-button">Like</button>
+                        <button class="comment-button">Comment</button>
+                        <button class="share-button">Share</button>
+                        <button class="edit-button" onclick="editPost(this)">Edit</button>
+                        <button class="delete-button" onclick="deletePost(this)">Delete</button>
+                    </div>
+                `;
+                userPosts.appendChild(newPost);
+            }
+        }
+    </script>
 </body>
 </html>

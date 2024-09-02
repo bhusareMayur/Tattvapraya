@@ -1105,3 +1105,72 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
+/* Community Messages Page Styles */
+.community-messages-list {
+    padding: 20px;
+}
+
+.message-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.message-card h2 {
+    margin-top: 0;
+}
+
+.message-card p {
+    font-size: 16px;
+    color: #333;
+}
+
+.message-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.message-card a:hover {
+    text-decoration: underline;
+}
+
+/* Additional styling for consistency */
+header {
+    background-color: #1883ed;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-container {
+    display: flex;
+}
+
+.sidebar, .right-sidebar {
+    width: 20%;
+    padding: 15px;
+}
+
+.content {
+    width: 60%;
+    padding: 15px;
+}
